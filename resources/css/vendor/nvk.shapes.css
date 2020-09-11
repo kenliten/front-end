@@ -1,0 +1,551 @@
+/*
+This file is part of nvk (https://kenliten.github.io/nvk)
+A project by @kenliten (Twitter: @oreyesgalay)
+A tiny and minimalist css framework
+
+This is the colors 'module', it allow to set background and text colors
+Colors in this 'module' are based in a material design pallete
+This module contain classes with the following scheme:
+  [d]'color'[p]-bg: for the background colors
+  [d]'color'[p]-hbg: for the background colors on hover
+  [d]'color'[p]-tx: for the text colors
+  [d]'color'[p]-htx: for the text colors on hover
+In all that cases the optional d at the start of the class means deep color,
+and the optional p at the end is for a pale color
+Also, this module contain the reset styles, so nvk.reset isn't needed
+
+License: BSD-3-Clause (conditions bellow)
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+*/
+*{
+  box-sizing: border-box;
+}
+html,body,div,span,applet,object,iframe,p,blockquote,pre,a,
+abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,
+strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,
+figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,
+time,mark,audio,video {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+h1,h2,h3,h4,h5,h6{
+  padding: 0 16px;
+}
+h1{
+  font-size: 3em;
+}
+h2{
+  font-size: 2em;
+}
+h3{
+  font-size: 1.8em;
+}
+h4{
+  font-size: 1.4em;
+}
+h5{
+  font-size: 1.2em;
+}
+h6{
+  font-size: 1em;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+  display: block;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1.15;
+}
+ol,ul {
+  list-style: none;
+}
+blockquote,q {
+  quotes: none;
+}
+blockquote:before,blockquote:after,q:before,q:after {
+  content: '';
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr{
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 1px solid #BDBDBD;
+  height: 0;
+  margin: 8px auto;
+  width: 95%;
+}
+input{
+  padding: 4px 8px;
+  width: 100%;
+  outline: none;
+}
+a {
+  color: #616161;
+  text-decoration: none;
+}
+a:hover{
+  color: #424242;
+  text-decoration: underline;
+}
+a:disabled,a.disabled,a:disabled:hover,a.disabled:hover{
+  color: #757575;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+.black-tx {
+  color: #000;
+}
+.black-htx:hover {
+  color: #000;
+}
+.black-bg {
+  background-color: #000;
+}
+.black-hbg:hover {
+  background-color: #000;
+}
+.red-tx {
+  color: #F44336;
+}
+.red-htx:hover {
+  color: #F44336;
+}
+.red-bg {
+  background-color: #F44336;
+}
+.red-hbg:hover {
+  background-color: #F44336;
+}
+.redp-bg {
+  background-color: #FFCDD2;
+}
+.redp-hbg:hover {
+  background-color: #FFCDD2;
+}
+.pink-tx {
+  color: #E91E63;
+}
+.pink-htx:hover {
+  color: #E91E63;
+}
+.pink-bg {
+  background-color: #E91E63;
+}
+.pink-hbg:hover {
+  background-color: #E91E63;
+}
+.pinkp-bg {
+  background-color: #F8BBD0;
+}
+.pinkp-hbg:hover {
+  background-color: #F8BBD0;
+}
+.purple-tx {
+  color: #9C27B0;
+}
+.purple-htx:hover {
+  color: #9C27B0;
+}
+.purple-bg {
+  background-color: #9C27B0;
+}
+.purple-hbg:hover {
+  background-color: #9C27B0;
+}
+.purplep-bg {
+  background-color: #E1BEE7;
+}
+.purplep-hbg:hover {
+  background-color: #E1BEE7;
+}
+.dpurple-tx {
+  color: #673AB7;
+}
+.dpurple-htx:hover {
+  color: #673AB7;
+}
+.dpurple-bg {
+  background-color: #673AB7;
+}
+.dpurple-hbg:hover {
+  background-color: #673AB7;
+}
+.dpurplep-bg {
+  background-color: #D1C4E9;
+}
+.dpurplep-hbg:hover {
+  background-color: #D1C4E9;
+}
+.indigo-tx {
+  color: #3F51B5;
+}
+.indigo-htx:hover {
+  color: #3F51B5;
+}
+.indigo-bg {
+  background-color: #3F51B5;
+}
+.indigo-hbg:hover {
+  background-color: #3F51B5;
+}
+.indigop-bg {
+  background-color: #C5CAE9;
+}
+.indigop-hbg:hover {
+  background-color: #C5CAE9;
+}
+.blue-tx {
+  color: #2196F3;
+}
+.blue-htx:hover {
+  color: #2196F3;
+}
+.blue-bg {
+  background-color: #2196F3;
+}
+.blue-hbg:hover {
+  background-color: #2196F3;
+}
+.bluep-bg {
+  background-color: #BBDEFB;
+}
+.bluep-hbg:hover {
+  background-color: #BBDEFB;
+}
+.lblue-tx {
+  color: #03A9F4;
+}
+.lblue-htx:hover {
+  color: #03A9F4;
+}
+.lblue-bg {
+  background-color: #03A9F4;
+}
+.lblue-hbg:hover {
+  background-color: #03A9F4;
+}
+.lbluep-bg {
+  background-color: #B3E5FC;
+}
+.lbluep-hbg:hover {
+  background-color: #B3E5FC;
+}
+.cyan-tx {
+  color: #00BCD4;
+}
+.cyan-htx:hover {
+  color: #00BCD4;
+}
+.cyan-bg {
+  background-color: #00BCD4;
+}
+.cyan-hbg:hover {
+  background-color: #00BCD4;
+}
+.cyanp-bg {
+  background-color: #B2EBF2;
+}
+.cyanp-hbg:hover {
+  background-color: #B2EBF2;
+}
+.teal-tx {
+  color: #009688;
+}
+.teal-htx:hover {
+  color: #009688;
+}
+.teal-bg {
+  background-color: #009688;
+}
+.teal-hbg:hover {
+  background-color: #009688;
+}
+.tealp-bg {
+  background-color: #B2DFDB;
+}
+.tealp-hbg:hover {
+  background-color: #B2DFDB;
+}
+.green-tx {
+  color: #4CAF50;
+}
+.green-htx:hover {
+  color: #4CAF50;
+}
+.green-bg {
+  background-color: #4CAF50;
+}
+.green-hbg:hover {
+  background-color: #4CAF50;
+}
+.greenp-bg {
+  background-color: #C8E6C9;
+}
+.greenp-hbg:hover {
+  background-color: #C8E6C9;
+}
+.lgreen-tx {
+  color: #00C853;
+}
+.lgreen-htx:hover {
+  color: #00C853;
+}
+.lgreen-bg {
+  background-color: #00C853;
+}
+.lgreen-hbg:hover {
+  background-color: #00C853;
+}
+.lgreenp-bg {
+  background-color: #DCEDC8;
+}
+.lgreenp-hbg:hover {
+  background-color: #DCEDC8;
+}
+.lime-tx {
+  color: #C6FF00;
+}
+.lime-htx:hover {
+  color: #C6FF00;
+}
+.lime-bg {
+  background-color: #C6FF00;
+}
+.lime-hbg:hover {
+  background-color: #C6FF00;
+}
+.limep-bg {
+  background-color: #F0F4C3;
+}
+.limep-hbg:hover {
+  background-color: #F0F4C3;
+}
+.yellow-tx {
+  color: #FFEB3B;
+}
+.yellow-htx:hover {
+  color: #FFEB3B;
+}
+.yellow-bg {
+  background-color: #FFEB3B;
+}
+.yellow-hbg:hover {
+  background-color: #FFEB3B;
+}
+.yellowp-bg {
+  background-color: #FFF9C4;
+}
+.yellowp-hbg:hover {
+  background-color: #FFF9C4;
+}
+.amber-tx {
+  color: #FFC107;
+}
+.amber-htx:hover {
+  color: #FFC107;
+}
+.amber-bg {
+  background-color: #FFC107;
+}
+.amber-hbg:hover {
+  background-color: #FFC107;
+}
+.amberp-bg {
+  background-color: #FFECB3;
+}
+.amberp-hbg:hover {
+  background-color: #FFECB3;
+}
+.orange-tx {
+  color: #FF9800;
+}
+.orange-htx:hover {
+  color: #FF9800;
+}
+.orange-bg {
+  background-color: #FF9800;
+}
+.orange-hbg:hover {
+  background-color: #FF9800;
+}
+.orangep-bg {
+  background-color: #FFE0B2;
+}
+.orangep-hbg:hover {
+  background-color: #FFE0B2;
+}
+.dorange-tx {
+  color: #FF5722;
+}
+.dorange-htx:hover {
+  color: #FF5722;
+}
+.dorange-bg {
+  background-color: #FF5722;
+}
+.dorange-hbg:hover {
+  background-color: #FF5722;
+}
+.dorangep-bg {
+  background-color: #FFCCBC;
+}
+.dorangep-hbg:hover {
+  background-color: #FFCCBC;
+}
+.brown-tx {
+  color: #5D4037;
+}
+.brown-htx:hover {
+  color: #5D4037;
+}
+.brown-bg {
+  background-color: #5D4037;
+}
+.brown-hbg:hover {
+  background-color: #5D4037;
+}
+.brownp-bg {
+  background-color: #D7CCC8;
+}
+.brownp-hbg:hover {
+  background-color: #D7CCC8;
+}
+.gray-tx {
+  color: #BDBDBD;
+}
+.gray-htx:hover {
+  color: #BDBDBD;
+}
+.gray-bg {
+  background-color: #BDBDBD;
+}
+.gray-hbg:hover {
+  background-color: #BDBDBD;
+}
+.grayp-bg {
+  background-color: #F5F5F5;
+}
+.grayp-hbg:hover {
+  background-color: #F5F5F5;
+}
+.white-tx {
+  color: #fff;
+}
+.white-htx:hover {
+  color: #fff;
+}
+.white-bg {
+  background-color: #fff;
+}
+.white-hbg:hover {
+  background-color: #fff;
+}
+.blue-gray-tx {
+  color: #607D8B;
+}
+.blue-gray-htx:hover {
+  color: #607D8B;
+}
+.blue-gray-bg {
+  background-color: #607D8B;
+}
+.blue-gray-hbg:hover {
+  background-color: #607D8B;
+}
+.blue-grayp-bg {
+  background-color: #CFD8DC;
+}
+.blue-grayp-hbg:hover {
+  background-color: #CFD8DC;
+}
+
+.cont{
+  display: block;
+  padding: 0 16px;
+}
+
+.panel{
+  display: block;
+  padding: 0 16px;
+  margin: 16px 0;
+  width: 100%;
+}
+
+.hero-cont{
+  display: block;
+  height: 100vh;
+  position: relative;
+  width: 100%
+}
+
+.vtop{
+  position: absolute;
+  top: 0;
+}
+
+.vtop-l{
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.vtop-r{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.vbottom{
+  position: absolute;
+  bottom: 0;
+}
+
+.vbottom-l{
+  left: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.vbottom-r{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.vmiddle{
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.vmiddle-l{
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.vmiddle-r{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+.primary-bg {
+    background-color: #F5F5F5;
+}
+
+.white-bg{
+    background-color: #ffffff;
+}
+
+.hero-cont{
+    display: block;
+    height: 100vh;
+    position: relative;
+    width: 100%
+}
+
+.cont{
+    display: block;
+    padding: 16px;
+}
+
+.vmiddle{
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.login-cont{
+    max-width: 420px;
+    padding: 16px;
+    width: 50%;
+}
+
+h1.user-icon-header{
+    color: #7B1FA2;
+    font-size: 7em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-grp{
+    display: flex;
+}
+
+.btn-grp button,
+.btn-grp a{
+    flex: auto;
+    font-size: medium;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-primary:hover{
+    color: #fff;
+    padding: 8px 16px;
+    width: 50%;
+    display: inline-block;
+    background: #6A1B9A;
+}
+
+.btn-primary{
+    border: 1px solid transparent;
+    color: #424242;
+    padding: 8px 16px;
+    width: 50%;
+    display: inline-block;
+    background: transparent;
+}
+
+.btn-secondary{
+    color: #424242;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+    width: 50%;
+    display: inline-block;
+    background: transparent;
+}
+
+.btn-secondary:hover{
+    color: #6A1B9A;
+    padding: 8px 16px;
+    width: 50%;
+    display: inline-block;
+    border: 1px solid #6A1B9A;
+}
+
+input{
+    border-left: 5px solid #E0E0E0;
+    padding: 8px 16px;
+    display: block;
+    width: 100%;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+input[type=checkbox]:checked + label{
+    background: #F3E5F5;
+    border-left: 5px solid #6A1B9A;
+    color: #424242;
+}
+
+label{
+    border-left: 5px solid transparent;
+    color: #616161;
+    padding: 4px;
+}
+
+label:hover{
+    border-left: 5px solid #9C27B0;
+}
+
+.password-recovery{
+    margin-top: 8px;
+    color: #424242;
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.password-recovery:hover{
+    color: #4A148C;
+    text-decoration: none;
+}
+
+/* animations */
+input[type=text]:focus, input[type=password]:focus{
+    border-left: 5px solid #4A148C;
+    background-color: #F3E5F5;
+    outline: none;
+}
