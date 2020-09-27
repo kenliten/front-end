@@ -1,5 +1,27 @@
 "use strict";
 
+var format = document.querySelector("#format").value;
+
+document.querySelector("#format").addEventListener("change", ()=>{
+    format = document.querySelector("#format").value;
+});
+
+function showAlert(color){
+    let alrt = document.querySelector("#alert");
+    alrt.style.display = "block";
+
+    let words = "Perfect Awesome Beautiful Nice Very&nbsp;Good Sweet".split(" ");
+
+    let word = words[Math.round(Math.random()* (words.length - 1))] + "!!!";
+
+    document.querySelector("#alert-title").innerHTML = `${color.name} (#${color.hex}) Is now copied in your clipboard`;
+    document.querySelector("#rand-word").innerHTML = word;
+
+    let timer = window.setTimeout(()=>{
+        alrt.style.display = "none";
+    }, 1500)
+}
+
 function darkColor(color){
     return parseInt(color, 16) > parseInt("AAAAAA", 16) ? true : false;
 }
@@ -46,14 +68,14 @@ function getRgb(hex){
 }
 
 window.onload = function(){
-    let names = "aliceblue antiquewhite aqua aquamarine azure beige bisque black blanchedalmond blue blueviolet brown burlywood cadetblue chartreuse chocolate coral cornflowerblue cornsilk crimson " +
-    "cyan darkblue darkcyan darkgoldenrod darkgray darkgreen darkkhaki darkmagenta darkolivegreen darkorange darkorchid darkred darksalmon darkseagreen darkslateblue darkslategray darkturquoise " +
-    "darkviolet deeppink deepskyblue dimgray dodgerblue firebrick floralwhite forestgreen fuchsia gainsboro whostwhite gold goldenrod gray green greenyellow honeydew hotpink indianred indigo " +
-    "ivory khaki lavender lavenderblush lawngreen lemonchiffon lightblue lightcoral lightcyan lightgoldenrodyellow lightgray lightgreen lightpink lightsalmon lightseagreen lightskyblue " +
-    "lightslategray lightsteelblue lightyellow lime limegreen linen magenta maroon mediumaquamarine mediumblue mediumorchid mediumpurple mediumseagreen mediumslateblue mediumspringgreen mediumturquoise " +
-    "mediumvioletred midnightblue mintcream mistyrose moccasin navajowhite navy oldlace olive olivedrab orange orangered orchid palegoldenrod palegreen paleturquoise palevioletred papayawhip peachpuff " + 
-    "peru pink plum powderblue purple rebeccapurple red rosybrown royalblue saddlebrown salmon sandybrown seagreen seashell sienna silver skyblue slateblue slategray snow springgreen steelblue tan " +
-    "teal thistle tomato turquoise violet wheat white whitesmoke yellow yellowgreen";
+    let names = "AliceBlue AntiqueWhite Aqua AquaMarine Azure Beige Bisque Black BlanchedAlmond Blue BlueViolet Brown BurlyWood CadetBlue Chartreuse Chocolate Coral CornFlowerBlue CornSilk Crimson " +
+    "Cyan DarkBlue DarkCyan DarkGoldenRod DarkGray DarkGreen DarkKhaki DarkMagenta DarkOliveGreen DarkOrange DarkOrchid Darkred DarkSalmon DarkSeaGreen DarkSlateBlue DarkSlateGray DarkTurquoise " +
+    "DarkViolet DeepPink DeepSkyBlue DimGray DodgerBlue FireBrick FloralWhite ForestGreen Fuchsia Gainsboro Ghostwhite Gold GoldenRod Gray Green GreenYellow HoneyDew HotPink IndianRed Indigo " +
+    "Ivory Khaki Lavender lavenderBlush LawnGreen LemonChiffon LightBlue LightCoral LightCyan LightGoldenRodYellow LightGray LightGreen LightPink LightSalmon LightSeaGreen LightSkyBlue " +
+    "LightSlateFray LightSteelBlue LightYellow Lime LimeGreen Linen Magenta Maroon MediumAquaMarine MediumBlue MediumOrchid MediumPurple MediumSeaGreen MediumSlateBlue MediumSpringGreen MediumTurquoise " +
+    "MediumVioletRed MidnightBlue MintCream MistyRose Moccasin NavajoWhite Navy OldLace Olive OliveDrab Orange OrangeRed Orchid PaleGoldenRod PaleGreen PaleTurquoise PaleVioletRed PapayaWhip PeachPuff " + 
+    "Peru Pink Plum PowderBlue Purple RebeccaPurple Red RosyBrown RoyalBlue SaddleBrown Salmon SandyBrown SeaGreen SeaShell Sienna Silver SkyBlue SlateBlue SlateGray Snow SpringGreen SteelBlue Tan " +
+    "Teal Thistle Tomato Turquoise Violet Wheat White WhiteSmoke Yellow YellowGreen";
     let codes = "F0F8FF FAEBD7 00FFFF 7FFFD4 F0FFFF F5F5DC FFE4C4 000000 FFEBCD 0000FF 8A2BE2 A52A2A DEB887 5F9EA0 7FFF00 D2691E FF7F50 6495ED FFF8DC DC143C 00FFFF 00008B 008B8B  B8860B A9A9A9 006400" + 
     "BDB76B 8B008B 556B2F FF8C00 9932CC 8B0000 E9967A 8FBC8F 483D8B 2F4F4F 00CED1 9400D3 FF1493 00BFFF 696969 1E90FF B22222 FFFAF0 228B22 FF00FF DCDCDC F8F8FF FFD700 DAA520 808080 008000 ADFF2F F0FFF0 " +
     "FF69B4 CD5C5C 4B0082 FFFFF0 F0E68C E6E6FA FFF0F5 7CFC00 FFFACD ADD8E6 F08080 F0FFFF FAFAD2 D3D3D3 90EE90 FFB6C1 FFA07A 20B2AA 87CEFA 778899 B0C4DE FFFFE0 00FF00 32CD32 FAF0E6 FF00FF 800000 66CDAA " +
@@ -69,16 +91,54 @@ window.onload = function(){
         colors.push({name: name, hex: codes[i], rgb: getRgb(codes[i])});
     });
     
-        // <span class="color-color-title">${color.name}</span>
-        // <span class="color-code-title">#${color.hex}</span>
+    // <span class="color-code-title">#${color.hex}</span>
     colors.forEach((color) => {
-        document.querySelector('#result').innerHTML += `<div class="color-div" style="background-color: ${color.name};">
-    <span class="dark-color">This is a dark colored text</span>
-    <span class="medium-color">This is a medium light colored text</span>
-    <span class="light-color">This is a light colored text</span>
-    <input class="color-input" type="text" value="${color.name}">
-    <input class="color-input" type="text" value="#${color.hex}">
-    <input class="color-input" type="text" value="${color.rgb}">
-</div>`;
+        let colorDiv = document.createElement("div");
+        colorDiv.className = "color-div";
+        colorDiv.style.backgroundColor = color.name.toLowerCase();
+        let h3 = document.createElement("h3");
+        h3.style.textAlign = "center";
+        h3.style.padding = "16px";
+        colorDiv.appendChild(h3);
+        h3.innerText = color.name;
+
+        let dark = document.createElement("span");
+        dark.className = "dark-color";
+        colorDiv.appendChild(dark);
+        dark.innerText = "This is a dark colored text";
+
+        let medium = document.createElement("span");
+        medium.className = "medium-color";
+        colorDiv.appendChild(medium);
+        medium.innerText = "This is a medium-light colored text";
+
+        let light = document.createElement("span");
+        light.className = "light-color";
+        colorDiv.appendChild(light);
+        light.innerText = "This is a light colored text";
+
+        let colorInput = document.createElement("input");
+        colorInput.className = "color-input";
+
+        colorDiv.appendChild(colorInput);
+        colorDiv.addEventListener("click", ()=>{
+            if (format == "html"){
+                colorInput.value = color.name;
+            } else if (format == "hexa") {
+                colorInput.value = "#" + color.hex;
+            } else if (format == "hex") {
+                colorInput.value = color.hex;
+            } else if (format == "rgb") {
+                colorInput.value = color.rgb;
+            }
+
+            colorInput.select();
+            colorInput.setSelectionRange(0,99999);
+
+            document.execCommand("copy");
+
+            showAlert(color);
+        });
+        document.querySelector('#result').appendChild(colorDiv);
     });
 }

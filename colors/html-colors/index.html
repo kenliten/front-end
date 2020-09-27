@@ -11,7 +11,27 @@
 
     <h1 class="special-title">HTML color Reference by <a href="http://github.com/kenliten" target="_blank">@kenliten</a></h1>
 
+    <select id="format" style="width: 100%; display: block; border: none; font-size: 16px; padding: 4px;">
+        <option value="html">HTML color name</option>
+        <option value="hexa">HTML Hex Code</option>
+        <option value="hex">Hex Code</option>
+        <option value="rgb">RGB color Code</option>
+    </select>
+
     <div id="result">
+    </div>
+
+    <footer>
+        This is the full list of 'safe' colors supported by all modern browsers.
+        <br>
+        If you click on a color, automaticaly, that color will be copied to your clipboard, the default shape is the html hex notation (#AAAAAA), but you can choose between rgb, hex and hex(without the hash "#")
+    </footer>
+
+    <div id="alert">
+        <div id="alert-content">
+            <h2 id="rand-word"></h2>
+            <h2 id="alert-title"></h2>
+        </div>
     </div>
 
     <script src="./js/main.js"></script>
