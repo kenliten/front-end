@@ -13,7 +13,7 @@
 
 .color-div{
     text-align: center;
-    border: 1px solid #838383;
+    height: 150px;
 }
 
 .color-div:hover + .color-inputs{
@@ -55,13 +55,12 @@
 .color-input{
     border: none;
     background-color: transparent;
-    width: 94%;
+    width: 100%;
     display: block;
     text-align: center;
-    padding: 8px;
-    font-size: 16px;
+    margin: auto;
+    font-size: 64px;
     color: transparent;
-    margin: 0 3%;
 }
 
 footer{

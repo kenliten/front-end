@@ -9,6 +9,7 @@ document.querySelector("#format").addEventListener("change", ()=>{
 function showAlert(color){
     let alrt = document.querySelector("#alert");
     alrt.style.display = "block";
+    alrt.style.backgroundColor = "#" + color.hex;
 
     let words = "Perfect Awesome Beautiful Nice Very&nbsp;Good Sweet".split(" ");
 
@@ -96,7 +97,7 @@ window.onload = function(){
         let colorDiv = document.createElement("div");
         colorDiv.className = "color-div";
         colorDiv.style.backgroundColor = color.name.toLowerCase();
-        let h3 = document.createElement("h3");
+        /* let h3 = document.createElement("h3");
         h3.style.textAlign = "center";
         h3.style.padding = "16px";
         colorDiv.appendChild(h3);
@@ -115,7 +116,7 @@ window.onload = function(){
         let light = document.createElement("span");
         light.className = "light-color";
         colorDiv.appendChild(light);
-        light.innerText = "This is a light colored text";
+        light.innerText = "This is a light colored text"; */
 
         let colorInput = document.createElement("input");
         colorInput.className = "color-input";
@@ -123,7 +124,7 @@ window.onload = function(){
         colorDiv.appendChild(colorInput);
         colorDiv.addEventListener("click", ()=>{
             if (format == "html"){
-                colorInput.value = color.name;
+                colorInput.value = color.name.toLowerCase();
             } else if (format == "hexa") {
                 colorInput.value = "#" + color.hex;
             } else if (format == "hex") {
