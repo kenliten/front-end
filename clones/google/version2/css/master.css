@@ -1,0 +1,132 @@
+header{
+    display: block;
+    width: 100%;
+}
+
+nav{
+    display: block;
+    width: 100%;
+    padding: 0 32px;
+    height: 48px;
+    text-align: right;
+}
+
+nav a{
+    margin: 0 2px;
+    font-size: 16px;
+    padding: 16px 4px;
+    max-height: 48px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.th-icon{
+    font-size: 20px;
+    padding: 14px 4px;
+}
+
+.user-icon{
+    font-size: 32px;
+    padding: 8px 4px;
+}
+
+main{
+    position: absolute;
+    transform: translateY(-70%);
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.search-bar{
+    border: 1px solid #dedede;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+    grid-gap: 0;
+    margin: 24px auto;
+    padding: 12px;
+    width: 40%;
+    font-size: 16px;
+    text-align: left;
+}
+
+.search-bar input{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    font-size: 16px;
+    height: 16px;
+    margin-left: 8px;
+    width: auto;
+    display: inline-block;
+}
+
+main button{
+    background-color: #f5f5f5;
+    border-color: #f5f5f5;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main button:hover{
+    background-color: #fcfcfc;
+    border-color: #d5d5d5;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #eaeaea;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0;
+}
+
+footer div{
+    padding: 10px 32px;
+    border-top: 1px solid #cacaca;
+}
+
+.pre-footer{
+    font-weight: normal;
+    grid-column: 1/-1;
+}
+
+.left-footer{
+    grid-column: 1/7;
+    grid-row: 2/3;
+}
+
+.right-footer{
+    text-align: right;
+    grid-column: 7/-1;
+    grid-row: 2/3;
+}
+
+.left-footer a{
+    padding: 8px 16px 8px 0;
+}
+
+.right-footer a{
+    padding: 8px 0 8px 16px;
+}
+
+@media (max-width: 768px){
+    header{
+        display: none;
+    }
+
+    .search-bar{
+        width: 80%;
+    }
+
+    footer, footer div{
+        display: block;
+        text-align: center !important;
+    }
+}

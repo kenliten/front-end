@@ -9,6 +9,12 @@ h2.white-tx, .intro-container{
     margin: 0 16px;
 }
 
+.project-link-list h2{
+    color: #fff;
+    padding: 16px 8px;
+    grid-column: 1/-1;
+}
+
 .project-link-list li{
     text-align: center;
     width: 100%;
