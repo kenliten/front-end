@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lists, lists and more lists</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.min.css">
+</head>
+
+<body>
+
+    <h1> Lists, lists and more lists </h1>
+    
+    <p>
+        There are 3 types of lists:
+    </p>
+
+    <dfn>
+        <dt>
+            Definition lists
+        </dt>
+        <dd>
+            Which show terms and definitions
+        </dd>
+        <dt>
+            Unordered lists
+        </dt>
+        <dd>
+            Which show bullets
+        </dd>
+        <dt>
+            Ordered lists
+        </dt>
+        <dd>
+            Which show numbers or letters
+        </dd>
+    </dfn>
+
+    <p>
+        Above is an example of a definition list.
+    </p>
+
+    <p>
+        Unordered lists can have a type attribute which can be applied to the UL or the LI tag. 
+        <br>The three values allowed are: 
+    </p>
+
+    <ul>
+        <li type="square">type = "square"</li>
+        <li type="disc">type = "disc"</li>
+        <li type="circle">type = "circle"</li>
+    </ul>
+
+    <p>
+        Ordered lists can have a type attribute too. Used along with a start attribute they can show:
+    </p>
+
+    <ol>
+        <li type="a">Lower case letters</li>
+        <li type="A">Upper case letters</li>
+        <li type="i">Lower case roman numerals</li>
+        <li type="I">Upper case roman numerals</li>
+        <li type="1">Numbers</li>
+    </ol>
+
+    <footer>
+        <h3>Browse the challenges</h3>
+        <div style="text-align: center;">
+            <a href="index.html" style="color: #fff; text-decoration: none;">Home</a>
+        </div>
+        <hr>
+        <ul>
+            <li><a href="index_challenge1.html">Challenge 1</a></li>
+            <li><a href="index_challenge2.html">Challenge 2</a></li>
+            <li><a href="index_challenge3.html">Challenge 3</a></li>
+            <li><a href="index_challenge4.html">Challenge 4</a></li>
+            <li><a href="index_challenge5.html">Challenge 5</a></li>
+            <li><a href="index_challenge6.html">Challenge 6</a></li>
+            <li><a href="index_challenge7.html">Challenge 7</a></li>
+            <li><a href="index_challenge8.html">Challenge 8</a></li>
+        </ul>
+    </footer>
+    
+    <style>
+        footer {
+            width: 100%;
+            background: #263238;
+            color: #fff;
+        }
+    
+        footer h3 {
+            text-align: center;
+        }
+    
+        footer ul {
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: repeat(8, 1fr);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    
+        footer ul li {
+            display: block;
+        }
+    
+        footer ul li a {
+            padding: 10px;
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tables for tabular data</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.min.css">
+</head>
+
+<body>
+
+    <h1> Tables for tabular data </h1>
+    
+    <table style="border: 1px solid black; border-collapse:collapse; width: 80%; margin: 0 auto;">
+        <thead>
+            <tr>
+                <th style="border: 1px solid black; padding: 8px; background: #263238; color: #fff;">January</th>
+                <th style="border: 1px solid black; padding: 8px; background: #263238; color: #fff;">February</th>
+                <th style="border: 1px solid black; padding: 8px; background: #263238; color: #fff;">March</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px;">38.1</td>
+                <td style="border: 1px solid black; padding: 8px;">39.1</td>
+                <td style="border: 1px solid black; padding: 8px;">37.3</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px;">34.1</td>
+                <td style="border: 1px solid black; padding: 8px;">35.1</td>
+                <td style="border: 1px solid black; padding: 8px;">34.3</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; padding: 8px;">34.3</td>
+                <td style="border: 1px solid black; padding: 8px;" colspan="2">No data</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <h3>Browse the challenges</h3>
+        <div style="text-align: center;">
+            <a href="index.html" style="color: #fff; text-decoration: none;">Home</a>
+        </div>
+        <hr>
+        <ul>
+            <li><a href="index_challenge1.html">Challenge 1</a></li>
+            <li><a href="index_challenge2.html">Challenge 2</a></li>
+            <li><a href="index_challenge3.html">Challenge 3</a></li>
+            <li><a href="index_challenge4.html">Challenge 4</a></li>
+            <li><a href="index_challenge5.html">Challenge 5</a></li>
+            <li><a href="index_challenge6.html">Challenge 6</a></li>
+            <li><a href="index_challenge7.html">Challenge 7</a></li>
+            <li><a href="index_challenge8.html">Challenge 8</a></li>
+        </ul>
+    </footer>
+    
+    <style>
+        footer {
+            width: 100%;
+            background: #263238;
+            color: #fff;
+        }
+    
+        footer h3 {
+            text-align: center;
+        }
+    
+        footer ul {
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: repeat(8, 1fr);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    
+        footer ul li {
+            display: block;
+        }
+    
+        footer ul li a {
+            padding: 10px;
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+
+</body>
+
+</html>

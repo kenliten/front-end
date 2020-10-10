@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>A simple form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.min.css">
+</head>
+
+<body>
+
+    <h1> A simple form </h1>
+
+    <form>
+        <div>
+            <label for="name">First Name: </label>
+            <input type="text" id="name">
+        </div>
+        <div>
+            <label for="surname">Last Name: </label>
+            <input type="text" id="surname">
+        </div>
+        <div>
+            <label for="address">Address: </label>
+            <input type="text" id="address">
+        </div>
+        <div>
+            <label for="state">State: </label>
+            <select name="state" id="state">
+                <option value="">NSW</option>
+                <option value="">FL</option>
+                <option value="">VG</option>
+            </select>
+        </div>
+        <div>
+            <label for="password">Password: </label>
+            <input type="password" id="password">
+        </div>
+        <div>
+            Gender:&nbsp;
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male"> Male </label> or 
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female"> Female</label>
+        </div>
+        <div>
+            <p for="bleat">Do you bleat like a sheep? </p>
+            <input type="checkbox" name="bleat" id="bleat"> <label for="bleat">Yes</label>
+        </div>
+        <div>
+            <p>
+                How many cups of coffee do you drink a day? 
+            </p>
+            <input type="radio" name="cups" id="less2">
+            <label for="less2">0 to 2 cup(s)</label>
+            <input type="radio" name="cups" id="less4">
+            <label for="less4">2 to 4 cups</label>
+            <br>
+            <input type="radio" name="cups" id="less8">
+            <label for="less8">4 to 8 cups</label>
+            <input type="radio" name="cups" id="less16">
+            <label for="less16">8 to 16 cups</label>
+        </div>
+        <div>
+            <label for="computer">Do you own a personal computer</label>
+            <select id="computer">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div>
+            <label for="howlong">How long would it take to make a HTML form? </label><br>
+            <input type="number" id="howlong">
+        </div>
+        <div>
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments"></textarea>
+        </div>
+        <input type="reset" value="Reset Form">
+        <input type="submit" value="Send Survey">
+    </form>
+    
+    <footer>
+        <h3>Browse the challenges</h3>
+        <div style="text-align: center;">
+            <a href="index.html" style="color: #fff; text-decoration: none;">Home</a>
+        </div>
+        <hr>
+        <ul>
+            <li><a href="index_challenge1.html">Challenge 1</a></li>
+            <li><a href="index_challenge2.html">Challenge 2</a></li>
+            <li><a href="index_challenge3.html">Challenge 3</a></li>
+            <li><a href="index_challenge4.html">Challenge 4</a></li>
+            <li><a href="index_challenge5.html">Challenge 5</a></li>
+            <li><a href="index_challenge6.html">Challenge 6</a></li>
+            <li><a href="index_challenge7.html">Challenge 7</a></li>
+            <li><a href="index_challenge8.html">Challenge 8</a></li>
+        </ul>
+    </footer>
+    
+    <style>
+        footer {
+            width: 100%;
+            background: #263238;
+            color: #fff;
+        }
+    
+        footer h3 {
+            text-align: center;
+        }
+    
+        footer ul {
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: repeat(8, 1fr);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    
+        footer ul li {
+            display: block;
+        }
+    
+        footer ul li a {
+            padding: 10px;
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+
+</body>
+
+</html>
