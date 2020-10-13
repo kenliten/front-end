@@ -1,0 +1,322 @@
+:root {
+    --disabled-bg-color: #F5F5F5;
+    --default-bg-color: #EEEEEE;
+    --default-bg-hover-color: #E0E0E0;
+    --default-txt-color: #636363;
+    --default-txt-hover-color: #212121;
+    --primary-bg-color: #BF360C;
+    --primary-bg-hover-color: #DD2C00;
+    --primary-pale-color: #FBE9E7;
+    --primary-pale-hover-color: #FFCCBC;
+    --primary-txt-color: #F5F5F5;
+    --primary-txt-hover-color: #FFFFFF;
+    --secondary-bg-color: #424242;
+    --secondary-bg-hover-color: #000000;
+    --secondary-pale-color: #E0E0E0;
+    --secondary-pale-hover-color: #BDBDBD;
+    --secondary-txt-color: #F5F5F5;
+    --secondary-txt-hover-color: #FFFFFF;
+}
+
+table, .table{
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr, table .tr, .table tr, .table .tr{
+    border-bottom: 1px solid var(--default-bg-hover-color);
+    transition: .3s;
+}
+
+table tr:last-of-type, .table tr:last-of-type, .table .tr:last-of-type, table .tr:last-of-type{
+    border: none;
+}
+
+table thead, table .thead, .table thead, .table .thead{
+    background-color: var(--default-bg-color);
+}
+
+table th, table .th, .table th, .table .th{
+    padding: 12px 6px;
+    font-weight: bolder !important;
+    color: var(--default-txt-color);
+}
+
+table td, table .td, .table td, .table .td{
+    padding: 12px 6px;
+    color: var(--default-txt-hover-color);
+}
+
+table tr:nth-child(even), .table tr:nth-child(even), table .tr:nth-child(even), .table .tr:nth-child(even){
+    background-color: var(--default-bg-color);
+}
+
+table.striped tbody tr, .table.striped tbody tr, table.striped tbody .tr, .table.striped tbody .tr{
+    border: 0;
+}
+
+table.bordered, table.bordered tbody tr, table.bordered td{
+    border: 1px solid var(--default-bg-hover-color)
+}
+
+table.hoverable tbody tr:hover, .table.hoverable tbody tr:hover, table.hoverable .tbody tr:hover, .table.hoverable .tbody tr:hover{
+    background-color: var(--default-bg-hover-color);
+}
+
+table.primary, .table.primary, table.primary tr, table.primary .tr, .table.primary tr, .table.primary .tr, table.primary td, table.primary .td, .table.primary td, .table.primary .td{
+    border-color: var(--primary-bg-color);
+}
+
+table.primary tr:last-of-type, .table.primary tr:last-of-type, .table.primary .tr:last-of-type, table.primary .tr:last-of-type{
+    border: 0;
+}
+
+table.primary thead, table.primary .thead, .table.primary thead, .table.primary .thead,
+table.primary th, table.primary .th, .table.primary th, .table.primary .th{
+    background-color: var(--primary-bg-hover-color);
+    color: var(--primary-txt-color);
+}
+
+table.primary th, table.primary .th, .table.primary th, .table.primary .th{
+    color: var(--primary-txt-color);
+}
+
+table.primary td, table.primary .td, .table.primary td, .table.primary .td{
+    color: var(--default-txt-hover-color);
+}
+
+table.primary tbody tr{
+    background-color: #FFFFFF;
+}
+
+table.primary.outline tbody, table.primary.outline td{
+    border: 1px solid var(--primary-bg-hover-color);
+}
+
+table.primary.outline thead, table.primary.outline th{
+    background-color: #FFFFFF;
+    border: 1px solid var(--primary-bg-hover-color);
+    color: var(--primary-bg-hover-color);
+}
+
+table.secondary.outline tbody, table.secondary.outline td{
+    border: 1px solid var(--secondary-bg-hover-color);
+    color: var(--default-txt-color);
+}
+
+table.secondary.outline thead, table.secondary.outline th{
+    background-color: #FFFFFF;
+    border: 1px solid var(--secondary-bg-hover-color);
+    color: var(--secondary-bg-hover-color);
+}
+
+table.outline tbody, table.outline td{
+    color: var(--default-txt-color);
+}
+
+table.primary.striped tr:nth-child(even), .table.primary.striped tr:nth-child(even), table.primary.striped .tr:nth-child(even), .table.primary.striped .tr:nth-child(even){
+    background-color: var(--primary-pale-color);
+}
+
+table.primary.striped tbody tr:hover, .table.primary.striped tbody tr:hover, table.primary.striped .tbody tr:hover, .table.primary.striped .tbody tr:hover{
+    background-color: var(--primary-pale-hover-color);
+}
+
+table.secondary, .table.secondary, table.secondary tr, table.secondary .tr, .table.secondary tr, .table.secondary .tr, table.secondary td, table.secondary .td, .table.secondary td, .table.secondary .td{
+    border-color: var(--secondary-bg-color);
+}
+
+table.secondary tr:last-of-type, .table.secondary tr:last-of-type, .table.secondary .tr:last-of-type, table.secondary .tr:last-of-type{
+    border: 0;
+}
+
+table.secondary thead, table.secondary .thead, .table.secondary thead, .table.secondary .thead,
+table.secondary th, table.secondary .th, .table.secondary th, .table.secondary .th{
+    background-color: var(--secondary-bg-hover-color);
+    color: var(--secondary-txt-color);
+}
+
+table.secondary th, table.secondary .th, .table.secondary th, .table.secondary .th{
+    color: var(--secondary-txt-color);
+}
+
+table.secondary td, table.secondary .td, .table.secondary td, .table.secondary .td{
+    color: var(--default-txt-hover-color);
+}
+
+table.secondary tbody tr{
+    background-color: #FFFFFF;
+}
+
+table.secondary.striped tr:nth-child(even), .table.secondary.striped tr:nth-child(even), table.secondary.striped .tr:nth-child(even), .table.secondary.striped .tr:nth-child(even){
+    background-color: var(--secondary-pale-color);
+}
+
+table.secondary.striped tbody tr:hover, .table.secondary.striped tbody tr:hover, table.secondary.striped .tbody tr:hover, .table.secondary.striped .tbody tr:hover{
+    background-color: var(--secondary-pale-hover-color);
+}
+
+table.v-striped tbody tr{
+    border-style: none;
+}
+
+table.v-striped tr td:nth-child(odd), .table.v-striped tr td:nth-child(odd){
+    background-color: var(--default-bg-color);
+}
+
+table.primary.v-striped tr td:nth-child(odd), .table.primary.v-striped tr td:nth-child(odd){
+    background-color: var(--primary-pale-color);
+}
+
+table.secondary.v-striped tr td:nth-child(odd), .table.secondary.v-striped tr td:nth-child(odd){
+    background-color: var(--secondary-pale-color);
+}
+
+table.red thead, table.red th,
+.table.red thead, table.red th{
+    background-color: #D32F2F;
+    border-color: #D32F2F;
+    color: #fff;
+}
+
+table.pink thead, table.pink th,
+.table.pink thead, table.pink th{
+    background-color: #C2185B;
+    border-color: #C2185B;
+    color: #fff;
+}
+
+table.purple thead, table.purple th,
+.table.purple thead, table.purple th{
+    background-color: #7B1FA2;
+    border-color: #7B1FA2;
+    color: #fff;
+}
+
+table.deep-purple thead, table.deep-purple th,
+.table.deep-purple thead, table.deep-purple th{
+    background-color: #512DA8;
+    border-color: #512DA8;
+    color: #fff;
+}
+
+table.indigo thead, table.indigo th,
+.table.indigo thead, table.indigo th{
+    background-color: #303F9F;
+    border-color: #303F9F;
+    color: #fff;
+}
+
+table.blue thead, table.blue th,
+.table.blue thead, table.blue th{
+    background-color: #1976D2;
+    border-color: #1976D2;
+    color: #fff;
+}
+
+table.light-blue thead, table.light-blue th,
+.table.light-blue thead, table.light-blue th{
+    background-color: #0288D1;
+    border-color: #0288D1;
+    color: #fff;
+}
+
+table.cyan thead, table.cyan th,
+.table.cyan thead, table.cyan th{
+    background-color: #0097A7;
+    border-color: #0097A7;
+    color: #fff;
+}
+
+table.teal thead, table.teal th,
+.table.teal thead, table.teal th{
+    background-color: #00796B;
+    border-color: #00796B;
+    color: #fff;
+}
+
+table.green thead, table.green th,
+.table.green thead, table.green th{
+    background-color: #388E3C;
+    border-color: #388E3C;
+    color: #fff;
+}
+
+table.light-green thead, table.light-green th,
+.table.light-green thead, table.light-green th{
+    background-color: #689F38;
+    border-color: #689F38;
+    color: #fff;
+}
+
+table.lime thead, table.lime th,
+.table.lime thead, table.lime th{
+    background-color: #AFB42B;
+    border-color: #AFB42B;
+    color: #fff;
+}
+
+table.yellow thead, table.yellow th,
+.table.yellow thead, table.yellow th{
+    background-color: #FBC02D;
+    border-color: #FBC02D;
+    color: #212121;
+}
+
+table.amber thead, table.amber th,
+.table.amber thead, table.amber th{
+    background-color: #FFA000;
+    border-color: #FFA000;
+    color: #fff;
+}
+
+table.orange thead, table.orange th,
+.table.orange thead, table.orange th{
+    background-color: #F57C00;
+    border-color: #F57C00;
+    color: #fff;
+}
+
+table.deep-orange thead, table.deep-orange th,
+.table.deep-orange thead, table.deep-orange th{
+    background-color: #E64A19;
+    border-color: #E64A19;
+    color: #fff;
+}
+
+table.brown thead, table.brown th,
+.table.brown thead, table.brown th{
+    background-color: #5D4037;
+    border-color: #5D4037;
+    color: #fff;
+}
+
+table.gray thead, table.gray th,
+.table.gray thead, table.gray th{
+    background-color: #616161;
+    border-color: #616161;
+    color: #fff;
+}
+
+table.blue-gray thead, table.blue-gray th,
+.table.blue-gray thead, table.blue-gray th{
+    background-color: #455A64;
+    border-color: #455A64;
+    color: #fff;
+}
+
+table.black thead, table.black th,
+.table.black thead, table.black th{
+    background-color: #000000;
+    border-color: #000000;
+    color: #fff;
+}
+
+table.white thead, table.white th,
+.table.white thead, table.white th{
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+    color: #000000;
+}
+

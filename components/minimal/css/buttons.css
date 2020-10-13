@@ -1,4 +1,4 @@
-:root{
+:root {
     --disabled-bg-color: #F5F5F5;
     --default-bg-color: #EEEEEE;
     --default-bg-hover-color: #E0E0E0;
@@ -6,10 +6,14 @@
     --default-txt-hover-color: #212121;
     --primary-bg-color: #BF360C;
     --primary-bg-hover-color: #DD2C00;
+    --primary-pale-color: #FBE9E7;
+    --primary-pale-hover-color: #FFCCBC;
     --primary-txt-color: #F5F5F5;
     --primary-txt-hover-color: #FFFFFF;
     --secondary-bg-color: #424242;
     --secondary-bg-hover-color: #000000;
+    --secondary-pale-color: #E0E0E0;
+    --secondary-pale-hover-color: #BDBDBD;
     --secondary-txt-color: #F5F5F5;
     --secondary-txt-hover-color: #FFFFFF;
 }
@@ -994,6 +998,7 @@ button.text,
 .button.text {
     background-color: transparent;
     border-color: transparent;
+    font-weight: bold;
     color: var(--default-txt-color);
 }
 
