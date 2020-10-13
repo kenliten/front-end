@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+
+#header{
+    display: flex;
+}
+
+#logo h1{
+    display: none;
+}
+
+#logo{
+    width: 30%;
+}
+
+#logo img{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 36px;
+}
+
+blockquote {
+    text-align: right;
+    font-size: xx-large;
+    padding-top: 32px;
+    padding-right: 24px;
+    width: 70%;
+}
+
+#content{
+    display: flex;
+}
+
+#content-side{
+    width: 40%;
+    padding: 16px;
+}
+
+dt, dd{
+    line-height: 2;
+}
+
+#content-side a{
+    font-size: larger;
+}
+
+#content-main{
+    width: 60%;
+    padding: 16px;
+    text-align: justify;
+}
+
+#content-main small, #content-main h2{
+    margin: 0;
+}
+
+#content-main p{
+    margin-top: 0;
+    line-height: 1.75;
+}
+
+a {
+    color: goldenrod;
+    text-decoration: none;
+}

@@ -1,0 +1,23 @@
+body{
+    background-color: #5b7fbd;
+    padding: 0 20px;
+}
+
+ul{
+    text-align: center;
+}
+
+li{
+    line-height: 1.5;
+}
+
+p.copyright{
+    font-style: italic;
+    font-weight: lighter;
+    font-size: small;
+    letter-spacing: 1px;
+}
+
+p.copyright a {
+    color: purple;
+}

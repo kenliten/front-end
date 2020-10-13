@@ -1,0 +1,17 @@
+body{
+    background-color: #55ccff;
+}
+
+ul{
+    text-align: center;
+    list-style: none;
+}
+
+li{
+    line-height: 1.25;
+}
+
+li::first-letter{
+    font-weight: 500;
+    font-size: x-large;
+}
