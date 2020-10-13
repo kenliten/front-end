@@ -1,0 +1,297 @@
+.container {
+    display: block;
+    padding: 4px 16px;
+    width: 100%;
+}
+
+.container-wide {
+    display: block;
+    padding: 2px 8px;
+    width: 100%;
+}
+
+.panel {
+    display: block;
+    padding: 0 16px;
+    margin: 16px 0;
+    width: 100%;
+}
+
+.hero-cont {
+    display: block;
+    height: 100vh;
+    position: relative;
+    width: 100%
+}
+
+.vtop {
+    position: absolute;
+    top: 0;
+}
+
+.vtop-l {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.vtop-r {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.vbottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.vbottom-l {
+    left: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.vbottom-r {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.vmiddle {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.vmiddle-l {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.vmiddle-r {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bordered, .border{
+    border: 1px solid #E0E0E0;
+}
+
+.border-left{
+    border-left: 1px solid #E0E0E0;
+}
+
+.border-right{
+    border-right: 1px solid #E0E0E0;
+}
+
+.border-top{
+    border-top: 1px solid #E0E0E0;
+}
+
+.border-bottom{
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.leftbar{
+    border-left: 4px solid #E0E0E0;
+}
+
+.rightbar{
+    border-right: 4px solid #E0E0E0;
+}
+
+.topbar{
+    border-top: 4px solid #E0E0E0;
+}
+
+.bottombar{
+    border-bottom: 4px solid #E0E0E0;
+}
+
+.borderless, .border-0, .no-border{
+    border: 0;
+}
+
+.border-white {
+    border-color: #FFF;
+}
+
+.hover-border-white:hover {
+    border-color: #FFF;
+}
+
+.border-black {
+    border-color: #000;
+}
+
+.hover-border-black:hover {
+    border-color: #000;
+}
+
+.border-red {
+    border-color: #F44336;
+}
+
+.hover-border-red:hover {
+    border-color: #F44336;
+}
+
+.border-pink {
+    border-color: #E91E63;
+}
+
+.hover-border-pink:hover {
+    border-color: #E91E63;
+}
+
+.border-purple {
+    border-color: #9C27B0;
+}
+
+.hover-border-purple:hover {
+    border-color: #9C27B0;
+}
+
+.border-deep-purple {
+    border-color: #673AB7;
+}
+
+.hover-border-deep-purple:hover {
+    border-color: #673AB7;
+}
+
+.border-indigo {
+    border-color: #3F51B5;
+}
+
+.hover-border-indigo:hover {
+    border-color: #3F51B5;
+}
+
+.border-blue {
+    border-color: #2196F3;
+}
+
+.hover-border-blue:hover {
+    border-color: #2196F3;
+}
+
+.border-light-blue {
+    border-color: #03A9F4;
+}
+
+.hover-border-light-blue:hover {
+    border-color: #03A9F4;
+}
+
+.border-cyan {
+    border-color: #00BCD4;
+}
+
+.hover-border-cyan:hover {
+    border-color: #00BCD4;
+}
+
+.border-teal {
+    border-color: #009688;
+}
+
+.hover-border-teal:hover {
+    border-color: #009688;
+}
+
+.border-green {
+    border-color: #4CAF50;
+}
+
+.hover-border-green:hover {
+    border-color: #4CAF50;
+}
+
+.border-light-green {
+    border-color: #00C853;
+}
+
+.hover-border-light-green:hover {
+    border-color: #00C853;
+}
+
+.border-lime {
+    border-color: #C6FF00;
+}
+
+.hover-border-lime:hover {
+    border-color: #C6FF00;
+}
+
+.border-yellow {
+    border-color: #FFEB3B;
+}
+
+.hover-border-yellow:hover {
+    border-color: #FFEB3B;
+}
+
+.border-amber {
+    border-color: #FFC107;
+}
+
+.hover-border-amber:hover {
+    border-color: #FFC107;
+}
+
+.border-orange {
+    border-color: #FF9800;
+}
+
+.hover-border-orange:hover {
+    border-color: #FF9800;
+}
+
+.border-deep-orange {
+    border-color: #FF5722;
+}
+
+.hover-border-deep-orange:hover {
+    border-color: #FF5722;
+}
+
+.border-brown {
+    border-color: #5D4037;
+}
+
+.hover-border-brown:hover {
+    border-color: #5D4037;
+}
+
+.border-gray {
+    border-color: #BDBDBD;
+}
+
+.hover-border-gray:hover {
+    border-color: #BDBDBD;
+}
+
+.border-white {
+    border-color: #fff;
+}
+
+.hover-border-white:hover {
+    border-color: #fff;
+}
+
+.border-blue-gray {
+    border-color: #607D8B;
+}
+
+.hover-border-blue-gray:hover {
+    border-color: #607D8B;
+}
+

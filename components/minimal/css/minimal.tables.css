@@ -24,6 +24,10 @@ table, .table{
     border-collapse: collapse;
 }
 
+table.responsive{
+    overflow-x: auto;
+}
+
 table tr, table .tr, .table tr, .table .tr{
     border-bottom: 1px solid var(--default-bg-hover-color);
     transition: .3s;
