@@ -17,11 +17,23 @@
     width: 100%;
 }
 
+.placer {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
 .hero-cont {
     display: block;
     height: 100vh;
     position: relative;
     width: 100%
+}
+
+.cont::after, .container::after, .container-wide::after, .panel::after, .placer::after, .hero-after::after {
+    content: " ";
+    display: inline;
+    clear: both;
 }
 
 .vtop {
@@ -293,5 +305,346 @@
 
 .hover-border-blue-gray:hover {
     border-color: #607D8B;
+}
+
+.card {
+    display: inline-block;
+    width: auto;
+}
+
+.card > img {
+    margin: 0;
+    display: block;
+    max-width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-start {
+    text-align: start;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.normal-text {
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lighter-text {
+    font-weight: lighter;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.bolder-text {
+    font-weight: bolder;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.oblique-text {
+    font-style: oblique;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.linethrough {
+    text-decoration: line-through;
+}
+
+.wavy {
+    text-decoration: wavy;
+}
+
+.overlined {
+    text-decoration: overline;
+}
+
+.wide {
+    letter-spacing: 2px;
+}
+
+.wider {
+    letter-spacing: 4px;
+}
+
+.round, .rounded, .round-m {
+    border-radius: 8px;
+}
+
+.round-xs {
+    border-radius: 2px;
+}
+
+.round-s {
+    border-radius: 4px;
+}
+
+.round-l {
+    border-radius: 12px;
+}
+
+.round-xl {
+    border-radius: 16px;
+}
+
+.round-xxl {
+    border-radius: 24px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.round-0, .no-round {
+    border-radius: 0;
+}
+
+.round-end-xs {
+    border-radius: 0 2px 2px 0;
+}
+
+.round-end-s {
+    border-radius: 0 4px 4px 0;
+}
+
+.round-end, .round-end-m {
+    border-radius: 0 8px 8px 0;
+}
+
+.round-end-l {
+    border-radius: 0 12px 12px 0;
+}
+
+.round-end-xl {
+    border-radius: 0 16px 16px 0;
+}
+
+.round-end-xxl {
+    border-radius: 0 24px 24px 0;
+}
+
+.round-start-xs {
+    border-radius: 2px 0 0 2px;
+}
+
+.round-start-s {
+    border-radius: 4px 0 0 4px;
+}
+
+.round-start, .round-start-m {
+    border-radius: 8px 0 0 8px;
+}
+
+.round-start-l {
+    border-radius: 12px 0 0 12px;
+}
+
+.round-start-xl {
+    border-radius: 16px 0 0 16px;
+}
+
+.round-start-xxl {
+    border-radius: 24px 0 0 24px;
+}
+
+.circle-start {
+    border-radius: 50% 0 0 50%;
+}
+
+.circle-end {
+    border-radius: 0 50% 50% 0;
+}
+
+.padding-xs {
+    padding: 2px 4px;
+}
+
+.padding-s {
+    padding: 4px 8px;
+}
+
+.padding-m, .padding {
+    padding: 8px 16px;
+}
+
+.padding-l {
+    padding: 12px 24px;
+}
+
+.padding-xl {
+    padding: 16px 32px;
+}
+
+.padding-xxl {
+    padding: 24px 48px;
+}
+
+.margin-xs {
+    margin: 4px;
+}
+
+.margin-s {
+    margin: 8px;
+}
+
+.margin-m, .margin {
+    margin: 16px;
+}
+
+.margin-l {
+    margin: 24px;
+}
+
+.margin-xl {
+    margin: 32px;
+}
+
+.margin-xxl {
+    margin: 48px;
+}
+
+.place-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.place-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.place-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.place-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.place-top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.place-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.place-bottom-right {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.place-bottom-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.place-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.show {
+    display: initial;
+}
+
+.hide {
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.spacer {
+    background-color: transparent;
+    color: transparent;
+    margin: 8px 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.block {
+    display: block !important;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
+
+.flex {
+    display: flex !important;
+}
+
+.inline-flex {
+    display: inline-flex !important;
+}
+
+.grid {
+    display: grid !important;
+}
+
+.inline-grid {
+    display: inline-grid !important;
+}
+
+.inline {
+    display: inline !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
 }
 

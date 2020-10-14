@@ -68,12 +68,9 @@ table {
 }
 
 hr {
-    border-bottom: 0;
-    border-left: 0;
-    border-right: 0;
+    border: 0;
     border-top: 1px solid #BDBDBD;
     height: 0;
-    margin: 8px auto;
     width: 100%;
 }
 
