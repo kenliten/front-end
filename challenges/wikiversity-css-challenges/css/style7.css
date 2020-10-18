@@ -2,23 +2,164 @@
     margin: 0;
     padding: 0;
     outline: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 .header{
-    background: url("https://picsum.photos/id/768/1366") no-repeat fixed center;
+    background: url("https://picsum.photos/id/18/1366") no-repeat fixed center;
     height: 100vh;
     width: 100vw;
+    position: relative;
 }
 
-.intro-card{
-    width: 90vw;
-    background-color: #f5f5f5;
+.navbar {
+    background-color: transparent;
+    position: relative;
+    display: block;
+    padding: 32px;
+    width: 100%;
+    text-align: right;
+}
+
+.navbar::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.navbar a {
+    color: #fafafa;
+    text-transform: uppercase;
+    padding: 8px;
+    margin: 8px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.home-link {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    left: 24px;
+    top: 16px;
 }
 
-.card{
+.header-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+}
+
+.vertical-content {
+    float: left;
+    transform: rotate(-90deg) translate(40%, -8vw);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 32px 0;
+}
+
+.vertical-content a {
+    color: #fafafa;
+    text-decoration: none;
+    margin: 0 12px;
+}
+
+.vertical-content a:hover {
+    color: #e0e0e0;
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.vertical-content * {
     display: inline-block;
+}
+
+.muted a {
+    opacity: .6;
+}
+
+.intro-card {
+    background-color: #f0f0f0;
+    width: 90%;
+    float: right
+}
+
+.card {
+    display: inline-block;
+    max-width: 22%;
+}
+
+.hero-content {
+    color: #e0e0e0;
+    width: 90%;
+    right: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -60%);
+}
+
+.label {
+    display: inline-block;
+    width: auto;
+    padding: 8px 16px;
+    background-color: #848484;
+    color: #e0e0e0;
+    font-weight: bold;
+}
+
+.hero-content h1 {
+    margin: 8px 0 42px 0;
+    width: 60%;
+    font-size: 3.5em;
+}
+
+.icon {
+    padding: 12px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    color: #e0e0e0;
+    font-size: 32px;
+    float: left;
+    margin-right: 12px;
+}
+
+.prices {
+    display: flex;
+}
+
+.price {
+    width: 22%;
+}
+
+.price-title {
+    margin-top: 12px;
+    opacity: .7;
+}
+
+.price-label {
+    font-weight: bold;
+}
+
+.card {
+    padding: 36px;
+}
+
+.card img {
+    float: left;
+    margin-right: 16px;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #212121;
+}
+
+.card-text {
+    color: #848484;
+    font-size: 13px;
 }
