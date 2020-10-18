@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AngularJSTodo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../components/minimal/css/minimal.base.css">
+    <link rel="stylesheet" href="../../components/minimal/css/minimal.buttons.css">
+    <link rel="stylesheet" href="../../components/minimal/css/minimal.utils.css">
+    <script src="../lib/angular.min.js"></script>
+    <title>AngularJS Todo App</title>
+</head>
+<body ng-controller="TODOController">
+
+    <style>
+        .done-true {
+            text-decoration: line-through;
+        }
+
+        #todo-input-panel {
+            display: flex;
+        }
+
+        #todo-input {
+            width: 85%;
+            border-radius: 0;
+            border: 1px solid #e0e0e0;
+            padding-left: 12px;
+        }
+
+        #save-button {
+            width: 15%;
+        }
+    </style>
+    
+    <div class="cont blue text-center">
+        <h1 class="white-text" ng-bind="appTitle"></h1>
+    </div>
+    <div class="cont">
+        <div class="cont">
+            <div class="cont">
+                <div class="panel" id="todo-input-panel">
+                    <input id="todo-input" type="text" ng-model="todoText" ng-keyup="evalKey($event)">
+                    <button id="save-button" class="xs light-blue" ng-click="saveTodo()">Save</button>
+                </div>
+                <div class="panel">
+                    <ul class="border">
+                        <li ng-repeat="todo in todos">
+                            <input type="checkbox" id="todo-{{todo.id}}" ng-model="todo.done">
+                            <label ng-bind="todo.text" class="done-{{todo.done}}" for="todo-{{todo.id}}"></label>
+                            <span class="badge" ng-click="deleteTodo(todo.id)">&times;</span>
+                        </li>
+                        <li ng-hide="todos.length > 0">
+                            <h4 class="blue-text text-center">Nothing Here Dude!</h4>
+                            <p class="padding text-center">
+                                <img src="https://pixabay.com/get/57e8d2454c57a514f1dc8460da29317e1736d7e5525070_640.jpg" style="width: 256px;" title="Picture from Arek Socha" alt="Empty Todo List" class="margin"><br>
+                                Looks like you haven't a todo.
+                            </p>
+                            <p class="padding text-center bold-text">
+                                Write your first todo and press enter to get started.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/AngularJSTodo.js"></script>
+    <script src="js/TODOController.js"></script>
+</body>
+</html>
