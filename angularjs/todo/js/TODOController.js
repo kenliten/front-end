@@ -26,6 +26,10 @@
             }
         }
         $scope.updateTodo = function(){}
+        $scope.deleteTodo = function(t) {
+            $scope.todos = $scope.todos.filter(x => x.id != t);
+            $scope.todos.forEach((td, i) => td.id = i);
+        }
     })
 
 })();
