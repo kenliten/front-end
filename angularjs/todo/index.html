@@ -52,7 +52,7 @@
         }
     </style>
     
-    <div class="cont blue text-center">
+    <div class="cont red text-center">
         <h1 class="white-text" ng-bind="appTitle"></h1>
     </div>
     <div class="cont">
@@ -60,7 +60,7 @@
             <div class="cont">
                 <div class="panel" id="todo-input-panel">
                     <input id="todo-input" type="text" ng-model="todoText" ng-keyup="evalKey($event, 'save')">
-                    <button id="save-button" class="xs light-blue" ng-click="saveTodo()">Save</button>
+                    <button id="save-button" class="xs red" ng-click="saveTodo()">Save</button>
                 </div>
                 <div class="panel">
                     <ul class="border">
@@ -70,9 +70,9 @@
                             <span class="badge"><span class="fas fa-pen" ng-click="openTodoEditor(todo.id)"></span>&nbsp;&nbsp;<span class="fas fa-times" ng-click="deleteTodo(todo.id)"></span></span>
                         </li>
                         <li ng-if="todos.length == 0">
-                            <h4 class="blue-text text-center">Nothing Here Dude!</h4>
+                            <h4 class="red-text text-center">Nothing Here Dude!</h4>
                             <p class="padding text-center">
-                                <img src="https://pixabay.com/get/57e8d2454c57a514f1dc8460da29317e1736d7e5525070_640.jpg" style="width: 256px;" title="Picture from Arek Socha" alt="Empty Todo List" class="margin"><br>
+                                <img src="../images/empty.jpg" style="width: 256px;" title="Picture from Arek Socha" alt="Empty Todo List" class="margin"><br>
                                 Looks like you haven't a todo.
                             </p>
                             <p class="padding text-center bold-text">
@@ -87,15 +87,15 @@
 
     <div id="todo-editor-container">
         <div id="todo-editor">
-            <h3 class="white-text blue text-center">Edit Todo</h3>
+            <h3 class="white-text red text-center">Edit Todo</h3>
             <div class="panel padding-xl">
                 <div id="todo-update-panel">
                     <input style="width: 100%;" class="padding" type="text" id="todo-update" ng-model="actualTodoText" ng-keyup="evalKey($event, 'edit')">
                 </div>
                 <div class="spacer"></div>
                 <div class="text-right">
-                    <button class="left xs red" ng-click="closeEditor()">Cancel</button>
-                    <button id="update-button" class="xs light-blue" ng-click="updateTodo()">Update</button>
+                    <button class="left xs secondary" ng-click="closeEditor()">Cancel</button>
+                    <button id="update-button" class="xs red" ng-click="updateTodo()">Update</button>
                 </div>
             </div>
         </div>
